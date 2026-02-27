@@ -18,7 +18,8 @@ Project Structure
 2. Table Creation
   A structured table retail_sales was designed to capture key transaction-level variables including; transaction ID | sale date  | sale time  | customer ID  | gender  | age  | product category  | quantity sold  | price per unit  | cost of goods sold (COGS)  | and total sale amount.
 
-***CREATE DATABASE sql_project_p1;
+```sql
+CREATE DATABASE p1_retail_db;
 
 CREATE TABLE retail_sales
 (
@@ -33,9 +34,8 @@ CREATE TABLE retail_sales
     price_per_unit FLOAT,	
     cogs FLOAT,
     total_sale FLOAT
-);****
-
-
+);
+```
 
 
 
