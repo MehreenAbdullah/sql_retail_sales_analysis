@@ -2,6 +2,7 @@
 Database: sql_project_p1
 
 Project Overview
+
 This project demonstrates SQL-based analysis of transactional retail sales data to evaluate revenue performance, customer behavior, and product category trends using SQL. After designing and structuring a relational database to store transaction-level data, the dataset was cleaned and validated to remove incomplete records and ensure data integrity. Exploratory Data Analysis (EDA) was then performed using SQL aggregations, filtering, grouping, date-based analysis, and window functions to examine sales distribution, customer concentration, seasonal patterns, and high-value transactions. The analysis addresses practical business problems such as identifying top-performing categories, ranking high-revenue customers, detecting peak sales months, evaluating demographic purchasing behavior, and understanding time-based sales patterns, demonstrating how raw sales data can be transformed into actionable business insights relevant to performance monitoring and financial analysis.
 
 Objectives
