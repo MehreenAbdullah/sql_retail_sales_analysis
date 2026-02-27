@@ -1,8 +1,7 @@
-#Project Title: Retail Sales Analysis
+## Project Title: Retail Sales Analysis
 Database: sql_project_p1
 
 Project Overview
-
 This project demonstrates SQL-based analysis of transactional retail sales data to evaluate revenue performance, customer behavior, and product category trends using SQL. After designing and structuring a relational database to store transaction-level data, the dataset was cleaned and validated to remove incomplete records and ensure data integrity. Exploratory Data Analysis (EDA) was then performed using SQL aggregations, filtering, grouping, date-based analysis, and window functions to examine sales distribution, customer concentration, seasonal patterns, and high-value transactions. The analysis addresses practical business problems such as identifying top-performing categories, ranking high-revenue customers, detecting peak sales months, evaluating demographic purchasing behavior, and understanding time-based sales patterns, demonstrating how raw sales data can be transformed into actionable business insights relevant to performance monitoring and financial analysis.
 
 Objectives
@@ -17,6 +16,8 @@ Project Structure
    Database Creation: The project starts by creating a database named p1_retail_db.
 2. Table Creation
   A structured table retail_sales was designed to capture key transaction-level variables including; transaction ID | sale date  | sale time  | customer ID  | gender  | age  | product category  | quantity sold  | price per unit  | cost of goods sold (COGS)  | and total sale amount.
+
+
 
 ```sql
 CREATE DATABASE p1_retail_db;
@@ -37,6 +38,7 @@ CREATE TABLE retail_sales
 );
 ```
 The table structure was designed to enable revenue analysis, profitability evaluation, and customer segmentation.
+
 
 2. Data Exploration & Cleaning
    Before analysis, data validation was performed to ensure integrity and reliability.
@@ -67,8 +69,10 @@ WHERE
 This step ensures the dataset is clean and reliable for financial and performance analysis.
 
 
+
 3. Business Analysis & Key Queries
 The following SQL queries were developed to simulate real business analysis scenarios.
+
 
 1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05**:
 ```sql
@@ -77,6 +81,7 @@ FROM retail_sales
 WHERE sale_date = '2022-11-05';
 ```
 Retrieves all transactions recorded on 5th November 2022 from the retail_sales table.
+
 
 2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022**:
 ```sql
@@ -93,6 +98,7 @@ WHERE
 Displays Clothing sales with quantity ≥ 4 during November 2022.
 Filters Clothing transactions with quantity of 4 or more in November 2022.
 
+
 3. **Write a SQL query to calculate the total sales (total_sale) for each category.**:
 ```sql
 SELECT 
@@ -104,6 +110,7 @@ GROUP BY 1
 ```
 Summarizes category-wise revenue and transaction count.
 
+
 4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**:
 ```sql
 SELECT
@@ -113,12 +120,14 @@ WHERE category = 'Beauty'
 ```
 Computes the average customer age for Beauty category purchases, rounded to two decimal places.
 
+
 5. **Write a SQL query to find all transactions where the total_sale is greater than 1000.**:
 ```sql
 SELECT * FROM retail_sales
 WHERE total_sale > 1000
 ```
 Highlights premium transactions with total sales above 1000 to examine high-revenue purchases.
+
 
 6. **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.**:
 ```sql
@@ -134,6 +143,7 @@ GROUP
 ORDER BY 1
 ```
 Highlights transaction distribution by gender within each product category.
+
 
 7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**:
 ```sql
@@ -155,6 +165,7 @@ WHERE rank = 1
 ```
 Identifies the top-selling month in each year based on average sales, revealing seasonal revenue patterns and year-wise performance variations. This ranking-based approach allows comparison of monthly performance within each year and highlights periods of peak sales activity.
 
+
 8. **Write a SQL query to find the top 5 customers based on the highest total sales **:
 ```sql
 SELECT 
@@ -166,6 +177,7 @@ ORDER BY 2 DESC
 LIMIT 5
 ```
 Ranks customers by total sales and isolates the top five contributors, helping assess revenue concentration and customer-level impact on overall performance.
+
 
 9. **Write a SQL query to find the number of unique customers who purchased items from each category.**:
 ```sql
@@ -199,12 +211,14 @@ GROUP BY shift
 ```
 Segments transactions into Morning, Afternoon, and Evening shifts and counts total orders in each period, revealing how sales activity is distributed across different times of the day.
 
+
 Findings
 * Customer Demographics: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
 * Revenue concentration is uneven across product categories, with certain segments contributing disproportionately to overall sales performance.
 *High-value transactions above the defined threshold highlight the presence of premium purchasing behavior and revenue clustering among select transactions.
 * Monthly ranking analysis reveals distinct seasonal peaks, indicating periods of stronger sales intensity within each year.
 * Time-of-day segmentation identifies variation in order volume across operational shifts, highlighting periods of peak transaction activity.
+  
 
 Reports
 
