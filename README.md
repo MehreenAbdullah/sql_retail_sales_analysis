@@ -242,6 +242,7 @@ Segments transactions into Morning, Afternoon, and Evening shifts and counts tot
 
 
 Findings
+---
 * Customer Demographics: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
 * Revenue concentration is uneven across product categories, with certain segments contributing disproportionately to overall sales performance.
 *High-value transactions above the defined threshold highlight the presence of premium purchasing behavior and revenue clustering among select transactions.
@@ -252,6 +253,7 @@ Findings
 
 
 Reports
+---
 
 Sales Summary:
 Provides a consolidated view of total revenue, order volume, and category-level contribution, highlighting which product segments drive overall sales performance and where revenue concentration exists.
@@ -267,6 +269,7 @@ Identifies top revenue-generating customers and measures unique customer distrib
 
 
 Conclusion
+---
 This project applies SQL-based exploratory data analysis to structured retail transaction data to uncover patterns in revenue distribution, customer contribution, and seasonal performance. By combining aggregation, filtering, and ranking techniques, the analysis highlights category-level revenue drivers, customer concentration at the top end, and time-based demand variation. The findings demonstrate how transactional data can be systematically examined to evaluate sales performance and support data-informed business assessment.
 
    
