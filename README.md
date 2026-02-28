@@ -3,7 +3,7 @@ Database: sql_project_p1
 
 Project Overview
 ---
-This project demonstrates SQL-based analysis of transactional retail sales data to evaluate revenue performance, customer behavior, and product category trends using SQL. After designing and structuring a relational database to store transaction-- level data, the dataset was cleaned and validated to remove incomplete records and ensure data integrity. Exploratory Data Analysis (EDA) was then performed using SQL aggregations, filtering, grouping, date-based analysis, and window functions to examine sales distribution,, customer concentration, seasonal patterns, and high-value transactions. The analysis addresses practical business problems such as identifying top-performing categories, ranking high-revenue customers, detecting peak sales months, evaluating demographic purchasing behavior, and understanding time-based sales patterns,, demonstrating how raw sales data can be transformed into actionable business insights relevant to performance monitoring and financial analysis.
+SQL-based analysis of transactional retail sales data to evaluate revenue trends, customer behavior, and product performance. The dataset was structured in a relational database, cleaned for consistency, and analyzed using aggregations, joins, date functions, and window functions to identify top categories, high-value customers, seasonal patterns, and sales concentration. The objective is to demonstrate how raw transaction data can be transformed into structured business insights for performance monitoring and financial analysis.
 
 Objectives
 ---
@@ -50,10 +50,10 @@ The table structure was designed to enable revenue analysis, profitability evalu
 2. Data Exploration & Cleaning
    Before analysis, data validation was performed to ensure integrity and reliability.
    
-    Record Count: Determine the total number of records in the dataset.
-    Customer Count: Find out how many unique customers are in the dataset.
-    Category Count: Identify all unique product categories in the dataset.
-    Null Value Check: Check for any null values in the dataset and delete records with missing data.
+    * Record Count: Determine the total number of records in the dataset.
+    * Customer Count: Find out how many unique customers are in the dataset.
+    * Category Count: Identify all unique product categories in the dataset.
+    * Null Value Check: Check for any null values in the dataset and delete records with missing data.
 
    
 
@@ -91,7 +91,7 @@ SELECT *
 FROM retail_sales
 WHERE sale_date = '2022-11-05';
 ```
-Retrieves all transactions recorded on 5th November 2022 from the retail_sales table.
+  Retrieves all transactions recorded on 5th November 2022 from the retail_sales table.
 
 
 2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022**
@@ -106,8 +106,8 @@ WHERE
     AND
     quantity >= 4
 ```
-Displays Clothing sales with quantity ≥ 4 during November 2022.
-Filters Clothing transactions with quantity of 4 or more in November 2022.
+ * Displays Clothing sales with quantity ≥ 4 during November 2022.
+ * Filters Clothing transactions with quantity of 4 or more in November 2022.
 
 
 
@@ -121,7 +121,7 @@ SELECT
 FROM retail_sales
 GROUP BY 1
 ```
-Summarizes category-wise revenue and transaction count.
+ Summarizes category-wise revenue and transaction count.
 
 
 
@@ -133,7 +133,7 @@ SELECT
 FROM retail_sales
 WHERE category = 'Beauty'
 ```
-Computes the average customer age for Beauty category purchases, rounded to two decimal places.
+ Computes the average customer age for Beauty category purchases, rounded to two decimal places.
 
 
 
@@ -143,7 +143,7 @@ Computes the average customer age for Beauty category purchases, rounded to two 
 SELECT * FROM retail_sales
 WHERE total_sale > 1000
 ```
-Highlights premium transactions with total sales above 1000 to examine high-revenue purchases.
+ Highlights premium transactions with total sales above 1000 to examine high-revenue purchases.
 
 
 
@@ -161,7 +161,7 @@ GROUP
     gender
 ORDER BY 1
 ```
-Highlights transaction distribution by gender within each product category.
+ Highlights transaction distribution by gender within each product category.
 
 
 
@@ -184,7 +184,8 @@ GROUP BY 1, 2
 ) as t1
 WHERE rank = 1
 ```
-Identifies the top-selling month in each year based on average sales, revealing seasonal revenue patterns and year-wise performance variations. This ranking-based approach allows comparison of monthly performance within each year and highlights periods of peak sales activity.
+ Identifies the top-selling month in each year based on average sales, revealing seasonal revenue patterns and year-wise performance variations. This ranking-based approach allows comparison of monthly
+ performance within each year and highlights periods of peak sales activity.
 
 
 
@@ -199,7 +200,7 @@ GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 5
 ```
-Ranks customers by total sales and isolates the top five contributors, helping assess revenue concentration and customer-level impact on overall performance.
+ Ranks customers by total sales and isolates the top five contributors, helping assess revenue concentration and customer-level impact on overall performance.
 
 
 
@@ -212,7 +213,7 @@ SELECT
 FROM retail_sales
 GROUP BY category
 ```
-Reveals customer penetration across categories by counting distinct buyers in each segment.
+ Reveals customer penetration across categories by counting distinct buyers in each segment.
 
 
 
@@ -236,7 +237,7 @@ SELECT
 FROM hourly_sale
 GROUP BY shift
 ```
-Segments transactions into Morning, Afternoon, and Evening shifts and counts total orders in each period, revealing how sales activity is distributed across different times of the day.
+  Segments transactions into Morning, Afternoon, and Evening shifts and counts total orders in each period, revealing how sales activity is distributed across different times of the day.
 
 
 
@@ -245,7 +246,7 @@ Findings
 ---
 * Customer Demographics: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
 * Revenue concentration is uneven across product categories, with certain segments contributing disproportionately to overall sales performance.
-*High-value transactions above the defined threshold highlight the presence of premium purchasing behavior and revenue clustering among select transactions.
+* High-value transactions above the defined threshold highlight the presence of premium purchasing behavior and revenue clustering among select transactions.
 * Monthly ranking analysis reveals distinct seasonal peaks, indicating periods of stronger sales intensity within each year.
 * Time-of-day segmentation identifies variation in order volume across operational shifts, highlighting periods of peak transaction activity.
   
