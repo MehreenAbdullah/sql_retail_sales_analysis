@@ -3,7 +3,7 @@ Database: sql_project_p1
 
 Project Overview
 ---
-SQL-based analysis of transactional retail sales data to evaluate revenue trends, customer behavior, and product performance. The dataset was structured in a relational database, cleaned for consistency, and analyzed using aggregations, joins, date functions, and window functions to identify top categories, high-value customers, seasonal patterns, and sales concentration. The objective is to demonstrate how raw transaction data can be transformed into structured business insights for performance monitoring and financial analysis.
+SQL-based analysis of transactional retail sales data to evaluate revenue trends, customer behavior, and product performance..The dataset was organized into tables within a database, cleaned for consistency, and analyzed using SQL aggregation queries. >; joins, date functions, and window functions to identify top categories, high-value customers, seasonal patterns, and sales concentration. The objective is to show-case how raw transaction data (cleaned and processed) can be transformed into structured business insights for performance monitoring and financial analysis.
 
 Objectives
 ---
@@ -286,8 +286,8 @@ Identifies top revenue-generating customers and measures unique customer distrib
 
 Conclusion
 ---
-This analysis evaluates 1,997 retail transactions across three product categories — Electronics, Clothing, and Beauty —> to assess revenue performance, customer contribution, and seasonal trends.
-Category-level aggregation indicates a relatively balanced revenue mix, with Electronics contributing approximately 313K, closely followed by Clothing at 311K and Beauty at 286K, suggesting diversified category performance rather than revenue dependence on a single segment. Monthly ranking identifies[ July 2022 and February 2023] as peak-performing periods, highlighting measurable seasonality in sales patterns. Time-of-day segmentation shows that the Morning shift accounts for the highest transaction volume ( approx 558 orders), indicating stronger demand concentration earlier in the day. Additionally, analysis of high-value transactions above 1,000 and top customer rankings reveals observable revenue concentration among a limited group of buyers. Overall, the project demonstrates how structured SQL analysis can transform transactional data into quantified insights for performance evaluation and business assessment.
+This analysis evaluates 1,997 retail transactions across three product categories i.e: Electronics, Clothing, and Beauty in order to assess {revenue performance, customer contribution, and seasonal trends}.
+Category-wise aggregation indicates a relatively balanced revenue mix, with , [closely followed by Clothing at 311K and Beauty at 286K], suggesting diversified category performance rather than revenue dependence on a single article. Monthly ranking identifies[ July 2022 and February 2023] as peak-performing periods, highlighting measurable seasonality in sales patterns. Time-of-day segmentation shows that the Morning shift has the highest transaction volume (around 558 orders), which means sales activity is stronger earlier in the day. Also, when looking at transactions above 1,000 and rannking the top customers, it becomes clear that a small group of buyers contributes a noticeable share of total revenue. Overall, this project shows how SQL analysis can turn raw transaction data into clear and measurable insights for evaluating sales performance and understanding business trends.
    
 
 
