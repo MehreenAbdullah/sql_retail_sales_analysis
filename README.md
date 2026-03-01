@@ -272,15 +272,13 @@ Reports
 ---
 
 Sales Summary:
-Provides a consolidated view of total revenue, order volume, and category-level contribution, highlighting which product segments drive overall sales performance and where revenue concentration exists.
+It gives an overall view of total revenue, number of orders, and how each category contributes to total sales. It helps in understanding which product segments are performing better and where most of the revenue is coming from.
 
 Trend Analysis:
-Examines monthly sales averages and ranks peak-performing months within each year to identify seasonal revenue patterns and performance fluctuations. Time-of-day segmentation further evaluates how transaction activity varies across operational shifts.
+Looks at monthly average sales and ranks the best-performing months in each year to understand seasonal changes in revenue. It also checks how sales activity changes across different time periods of the day to see when transactions are higher.
 
 Customer Insights:
-Identifies top revenue-generating customers and measures unique customer distribution across categories, revealing revenue concentration and customer penetration by segment.
-
-
+ IT identifies the top revenue-generating customers and calculates how many unique customers are purchasing from each category. This helps to see how revenue is distributed among customers and how strong each category’s customer base is.
 
 
 
