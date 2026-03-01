@@ -79,10 +79,25 @@ This step ensures the dataset is clean and reliable for financial and performanc
 
 
 ---
+---------Data exploration........
+
+-- How many sales we have?
+SELECT COUNT(*) as total_sale FROM retail_sales
+
+-- How many uniuque customers we have ?
+
+SELECT COUNT(DISTINCT customer_id) as total_sale FROM retail_sales
+
+
+
+SELECT DISTINCT category FROM retail_sales
+
+
+
+----
 
 3. Business Analysis & Key Queries
 The following SQL queries were developed to simulate real business analysis scenarios.
-
 
 
 1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05**:
@@ -271,9 +286,8 @@ Identifies top revenue-generating customers and measures unique customer distrib
 
 Conclusion
 ---
-This project applies SQL-based exploratory data analysis to structured retail transaction data to uncover patterns in revenue distribution, customer contribution, and seasonal performance. By combining aggregation, filtering, and ranking techniques, the analysis highlights category-level revenue drivers, customer concentration at the top end, and time-based demand variation. The findings demonstrate how transactional data can be systematically examined to evaluate sales performance and support data-informed business assessment.
-
-   
+This analysis evaluates 1,997 retail transactions across three product categories — Electronics, Clothing, and Beauty —> to assess revenue performance, customer contribution, and seasonal trends.
+Category-level aggregation indicates a relatively balanced revenue mix, with Electronics contributing approximately 313K, closely followed by Clothing at 311K and Beauty at 286K, suggesting diversified category performance rather than revenue dependence on a single segment. Monthly ranking identifies[ July 2022 and February 2023] as peak-performing periods, highlighting measurable seasonality in sales patterns. Time-of-day segmentation shows that the Morning shift accounts for the highest transaction volume ( approx 558 orders), indicating stronger demand concentration earlier in the day. Additionally, analysis of high-value transactions above 1,000 and top customer rankings reveals observable revenue concentration among a limited group of buyers. Overall, the project demonstrates how structured SQL analysis can transform transactional data into quantified insights for performance evaluation and business assessment.
    
 
 
